@@ -1,4 +1,4 @@
-package hotalbino.projectmonkeyscope;
+package com.projectmonkeyscope;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

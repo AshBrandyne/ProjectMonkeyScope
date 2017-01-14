@@ -1,4 +1,4 @@
-package hotalbino.projectmonkeyscope;
+package com.projectmonkeyscope;
 
 import org.junit.Test;
 
