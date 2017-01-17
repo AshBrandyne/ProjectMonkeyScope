@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Project MonkeyScope</string>
+    <string name="enter_dob">enter your birth date</string>
 </resources>
