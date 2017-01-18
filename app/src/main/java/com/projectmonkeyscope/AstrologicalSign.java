@@ -20,12 +20,12 @@ public class AstrologicalSign {
     /**
      * The date the sign begins.
      */
-    private Date startDate;
+    private MonthDay startDate;
 
     /**
      * The date the sign ends.
      */
-    private Date endDate;
+    private MonthDay endDate;
 
     /**
      * Connstructor for Astrological Sign
@@ -33,7 +33,7 @@ public class AstrologicalSign {
      * @param startDate The date the sign begins
      * @param endDate The date the sign ends
      */
-    public AstrologicalSign(String name, Date startDate, Date endDate) {
+    public AstrologicalSign(String name, MonthDay startDate, MonthDay endDate) {
         this.name = name;
         this.startDate = startDate;
         this.endDate = endDate;
@@ -53,26 +53,21 @@ public class AstrologicalSign {
      */
     public static AstrologicalSign[] getAllSigns() {
 
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-
         AstrologicalSign[] signs = new AstrologicalSign[12];
 
-        try {
-            signs[0] = new AstrologicalSign("Aquarius",     dateFormat.parse("2000-01-20"), dateFormat.parse("2000-02-18"));
-            signs[1] = new AstrologicalSign("Pisces",       dateFormat.parse("2000-02-19"), dateFormat.parse("2000-03-20"));
-            signs[2] = new AstrologicalSign("Aries",        dateFormat.parse("2000-03-21"), dateFormat.parse("2000-04-19"));
-            signs[3] = new AstrologicalSign("Taurus",       dateFormat.parse("2000-04-20"), dateFormat.parse("2000-05-20"));
-            signs[4] = new AstrologicalSign("Gemini",       dateFormat.parse("2000-05-21"), dateFormat.parse("2000-06-20"));
-            signs[5] = new AstrologicalSign("Cancer",       dateFormat.parse("2000-06-21"), dateFormat.parse("2000-07-22"));
-            signs[6] = new AstrologicalSign("Leo",          dateFormat.parse("2000-07-23"), dateFormat.parse("2000-08-22"));
-            signs[7] = new AstrologicalSign("Virgo",        dateFormat.parse("2000-08-23"), dateFormat.parse("2000-09-22"));
-            signs[8] = new AstrologicalSign("Libra",        dateFormat.parse("2000-09-23"), dateFormat.parse("2000-10-22"));
-            signs[9] = new AstrologicalSign("Scorpio",      dateFormat.parse("2000-10-23"), dateFormat.parse("2000-11-21"));
-            signs[10] = new AstrologicalSign("Sagittarius", dateFormat.parse("2000-11-22"), dateFormat.parse("2000-12-21"));
-            signs[11] = new AstrologicalSign("Capricorn",   dateFormat.parse("2000-12-22"), dateFormat.parse("2001-01-19"));
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
+        signs[0] = new AstrologicalSign("Aquarius",     new MonthDay(1, 20), new MonthDay(2, 18));
+        signs[1] = new AstrologicalSign("Pisces",       new MonthDay(2, 19), new MonthDay(3, 20));
+        signs[2] = new AstrologicalSign("Aries",        new MonthDay(3, 21), new MonthDay(4, 19));
+        signs[3] = new AstrologicalSign("Taurus",       new MonthDay(4, 20), new MonthDay(5, 20));
+        signs[4] = new AstrologicalSign("Gemini",       new MonthDay(5, 21), new MonthDay(6, 20));
+        signs[5] = new AstrologicalSign("Cancer",       new MonthDay(6, 21), new MonthDay(7, 22));
+        signs[6] = new AstrologicalSign("Leo",          new MonthDay(7, 23), new MonthDay(8, 22));
+        signs[7] = new AstrologicalSign("Virgo",        new MonthDay(8, 23), new MonthDay(9, 22));
+        signs[8] = new AstrologicalSign("Libra",        new MonthDay(9, 23), new MonthDay(10, 22));
+        signs[9] = new AstrologicalSign("Scorpio",      new MonthDay(10, 23), new MonthDay(11, 21));
+        signs[10] = new AstrologicalSign("Sagittarius", new MonthDay(11, 22), new MonthDay(12, 21));
+        signs[11] = new AstrologicalSign("Capricorn",   new MonthDay(12, 22), new MonthDay(1, 19));
+
         return signs;
     }
 
@@ -81,7 +76,7 @@ public class AstrologicalSign {
      * @param date The date you want to know the sign for
      * @return The astrological sign associated with the date
      */
-    public static AstrologicalSign getAstrologicalSignForDate(Date date) {
+    public static AstrologicalSign getAstrologicalSignForDate(MonthDay date) {
         return getAstrologicalSignForDate(date, AstrologicalSign.getAllSigns());
     }
 
@@ -91,11 +86,15 @@ public class AstrologicalSign {
      * @param signs An array containing the signs you want to check the date for
      * @return The astrological sign associated with a date
      */
-    public static AstrologicalSign getAstrologicalSignForDate(Date date, AstrologicalSign[] signs) {
+    public static AstrologicalSign getAstrologicalSignForDate(MonthDay date, AstrologicalSign[] signs) {
 
         for(int i = 0; i < signs.length; i++) {
-            if(date.after(signs[i].startDate) && date.before(signs[i].endDate)) {
+            if(date.isAfter(signs[i].startDate) && date.isBefore(signs[i].endDate)) {
                 return signs[i];
+            } else if (signs[i].startDate.isAfter(signs[i].endDate)) {
+                if(date.isAfter(signs[i].startDate) || date.isBefore(signs[i].endDate)) {
+                    return signs[i];
+                }
             }
         }
         return null;
@@ -108,14 +107,7 @@ public class AstrologicalSign {
      * @return The Astrological Sign associated with a date
      */
     public static AstrologicalSign getAstrologicalSignForDate(int month, int day) {
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-        try {
-            String dateString = "2000-" + month + "-" + day;
-            Date date = dateFormat.parse(dateString);
-            return getAstrologicalSignForDate(date);
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-        return null;
+        MonthDay date = new MonthDay(month, day);
+        return getAstrologicalSignForDate(date);
     }
 }
