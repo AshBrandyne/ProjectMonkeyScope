@@ -89,7 +89,10 @@ public class AstrologicalSign {
     public static AstrologicalSign getAstrologicalSignForDate(MonthDay date, AstrologicalSign[] signs) {
 
         for(int i = 0; i < signs.length; i++) {
-            if(date.isAfter(signs[i].startDate) && date.isBefore(signs[i].endDate)) {
+            if (date.isEqual(signs[i].startDate) || date.isEqual(signs[i].endDate)) {
+                return signs[i];
+            }
+            else if(date.isAfter(signs[i].startDate) && date.isBefore(signs[i].endDate)) {
                 return signs[i];
             } else if (signs[i].startDate.isAfter(signs[i].endDate)) {
                 if(date.isAfter(signs[i].startDate) || date.isBefore(signs[i].endDate)) {
