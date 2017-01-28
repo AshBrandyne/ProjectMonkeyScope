@@ -1,5 +1,6 @@
 package com.projectmonkeyscope;
 
+import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -49,6 +50,17 @@ public class Horoscope {
      * @return The horoscope for this sign and date.
      */
     public String toString() {
-        return "Placeholder horoscope for " + sign + " on " + date;
+        PhrasalTemplate phrasalTemplate = new PhrasalTemplate(getSeed());
+        return "Placeholder horoscope for " + sign + " on " + date + ": " + phrasalTemplate.getTestPhrase();
+    }
+
+    /**
+     * Generates and returns a seed for this horoscope based on the date and astrological sign
+     * @return A seed for the horoscope
+     */
+    private long getSeed() {
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(date);
+        return cal.get(Calendar.YEAR) + cal.get(Calendar.MONTH) * 10 + cal.get(Calendar.DATE) * 100 * sign.toString().hashCode();
     }
 }
