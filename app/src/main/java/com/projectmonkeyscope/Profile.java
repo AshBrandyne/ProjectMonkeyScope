@@ -1,7 +1,10 @@
 package com.projectmonkeyscope;
 
+import java.io.Serializable;
+
 /**Profile Class
  * Holds month and day from user information entered in ProfileActivity
+ * Implements Serializable so it can be passed through Bundles
  *
  * Saved to SharedPreferences in ProfileActivity
  *
@@ -10,7 +13,7 @@ package com.projectmonkeyscope;
  * @version 1.2.0 2017-01-17
  */
 
-public class Profile {
+public class Profile{
     /**
      * The birth month and day of the user as a MonthDay Object
      */
