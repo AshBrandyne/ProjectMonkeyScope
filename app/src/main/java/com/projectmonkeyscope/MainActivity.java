@@ -5,28 +5,20 @@ import android.os.Bundle;
 import android.util.Log;
 
 public class MainActivity extends AppCompatActivity {
-    protected static final String ACTIVITY_NAME = "MainActivity";
     /**
-     * Static keys for SharedPrefs
+     * Activity name for Log purposes
      */
-    public static final String DAY_KEY = "dayKey";
-    public static final String MONTH_KEY = "monthKey";
+    protected static final String ACTIVITY_NAME = "MainActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        /**
-         * Test to see if int was sent in bundle
-         */
-        Bundle extras = getIntent().getExtras();
-        int test=0;
-        if (extras != null) {
-            test = extras.getInt(DAY_KEY);
-        }
+        // Let's get the MAIN_PROFILE and see if it worked!
+        Profile userProfile = Profile.MAIN_PROFILE;
 
-        Log.i(ACTIVITY_NAME, "In onCreate() with key: " + test);
+        Log.i(ACTIVITY_NAME, "In onCreate() with key: " + userProfile.toString());
 
     }
 }
