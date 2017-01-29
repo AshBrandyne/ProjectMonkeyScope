@@ -51,42 +51,34 @@ public class ProfileActivity extends AppCompatActivity {
      * The Shared Preferences
      */
     SharedPreferences sharedPreferences;
-    /**
-     * Profile object holds user's birth date
-     */
-    //Profile userProfile;
+    
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-        //Finds and initializes the XML elements
+        /* Finds and initializes the XML elements */
         monkeyLogo = (ImageView) findViewById(R.id.logo);
         datePicker = (DatePicker) findViewById(R.id.date_picker);
         submitDateButton = (Button) findViewById(R.id.dob_button);
 
-        //initializes sharedPrefs with (Context)ProfileActivity.class
+        /* initializes sharedPrefs */
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
 
-        //When user clicks button, saves day and month to sharedPreferences
         submitDateButton.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //get day and month from DatePicker
+                /* get day and month from DatePicker */
                 int day = datePicker.getDayOfMonth();
                 int month = datePicker.getMonth() + 1;
 
-                //save date to sharedPrefs
-                saveDateToSharedPreferences(month, day);
+                saveDateToSharedPreferences(month, day); //save date to sharedPrefs
 
-                //create new Profile object
-                //userProfile = new Profile(month, day);
+                Profile.MAIN_PROFILE = new Profile(month, day); //initialize Main Profile for user
 
-                //create and fire intent to MainActivity with month and day in bundle
+                /* create and fire intent to MainActivity */
                 Intent mainIntent = new Intent(ProfileActivity.this, MainActivity.class);
-                mainIntent.putExtra(MONTH_KEY, month);
-                mainIntent.putExtra(DAY_KEY, day);
                 startActivity(mainIntent);
 
             }
@@ -101,11 +93,11 @@ public class ProfileActivity extends AppCompatActivity {
      * @param day user's day of birth
      */
     private void saveDateToSharedPreferences(int month, int day) {
-
-        //commit day and month to sharedPrefs
         SharedPreferences.Editor editor = sharedPreferences.edit();
+
         editor.putInt(DAY_KEY, day);
         editor.putInt(MONTH_KEY, month);
+
         editor.commit();
     }
 
