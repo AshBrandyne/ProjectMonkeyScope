@@ -18,6 +18,10 @@ public class Profile{
      * The birth month and day of the user as a MonthDay Object
      */
     private MonthDay monthDay;
+    /**
+     * Static variable holds the main profile for use throughout the app
+     */
+    public static Profile MAIN_PROFILE;
 
 
     /**
@@ -61,6 +65,13 @@ public class Profile{
      */
     public void setDay(int day) {
         monthDay.setDay(day);
+    }
+
+    @Override
+    public String toString() {
+        return "[ day: " + getDay() +
+                " month: " + getMonth() +
+                " ]";
     }
 
 }
