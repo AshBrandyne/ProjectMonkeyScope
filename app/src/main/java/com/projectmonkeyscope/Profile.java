@@ -1,7 +1,5 @@
 package com.projectmonkeyscope;
 
-import java.io.Serializable;
-
 /**Profile Class
  * Holds month and day from user information entered in ProfileActivity
  * Implements Serializable so it can be passed through Bundles
@@ -17,11 +15,11 @@ public class Profile{
     /**
      * The birth month and day of the user as a MonthDay Object
      */
-    private MonthDay monthDay;
+    private MonthDay birthDate;
     /**
      * Static variable holds the main profile for use throughout the app
      */
-    public static Profile MAIN_PROFILE;
+    public static Profile mainProfile;
 
 
     /**
@@ -32,7 +30,7 @@ public class Profile{
      * @param day the birth day
      */
     public Profile(int month, int day) {
-        monthDay = new MonthDay(month, day);
+        birthDate = new MonthDay(month, day);
     }
 
     /**
@@ -40,7 +38,7 @@ public class Profile{
      * @return the user's birth month (1-12)
      */
     public int getMonth() {
-        return monthDay.getMonth();
+        return birthDate.getMonth();
     }
 
     /**
@@ -48,7 +46,7 @@ public class Profile{
      * @return the user's birth day (1-31)
      */
     public int getDay() {
-        return monthDay.getDay();
+        return birthDate.getDay();
     }
 
     /**
@@ -56,7 +54,7 @@ public class Profile{
      * @param month the birth month
      */
     public void setMonth(int month) {
-        monthDay.setMonth(month);
+        birthDate.setMonth(month);
     }
 
     /**
@@ -64,7 +62,7 @@ public class Profile{
      * @param day the birth day
      */
     public void setDay(int day) {
-        monthDay.setDay(day);
+        birthDate.setDay(day);
     }
 
     @Override

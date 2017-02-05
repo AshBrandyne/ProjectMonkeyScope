@@ -1,6 +1,5 @@
 package com.projectmonkeyscope;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
@@ -11,7 +10,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.ImageView;
-import android.widget.Spinner;
 
 
 /**
@@ -75,7 +73,7 @@ public class ProfileActivity extends AppCompatActivity {
 
                 saveDateToSharedPreferences(month, day); //save date to sharedPrefs
 
-                Profile.MAIN_PROFILE = new Profile(month, day); //initialize Main Profile for user
+                Profile.mainProfile = new Profile(month, day); //initialize Main Profile for user
 
                 /* create and fire intent to MainActivity */
                 Intent mainIntent = new Intent(ProfileActivity.this, MainActivity.class);

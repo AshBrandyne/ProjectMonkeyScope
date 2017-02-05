@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         actionBar.setDisplayHomeAsUpEnabled(true);
 
         // Let's get the MAIN_PROFILE and see if it worked!
-        Profile userProfile = Profile.MAIN_PROFILE;
+        Profile userProfile = Profile.mainProfile;
 
         Log.i(ACTIVITY_NAME, "In onCreate() with key: " + userProfile.toString());
 
