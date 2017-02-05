@@ -30,7 +30,7 @@ public class SplashActivity extends AppCompatActivity {
     /**
      * The Shared Preferences
      */
-    SharedPreferences sharedPreferences;
+    private SharedPreferences sharedPreferences;
     /**
      * Boolean flag set to true if profile exists in sharedPrefs
      */
@@ -59,7 +59,7 @@ public class SplashActivity extends AppCompatActivity {
         if (day > 0 && month > 0) {
             profileExists = true;
 
-            Profile.MAIN_PROFILE = new Profile(month, day);
+            Profile.mainProfile = new Profile(month, day);
         }
 
         /* initializes the logo and animates it */
