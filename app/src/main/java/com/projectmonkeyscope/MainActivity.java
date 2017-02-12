@@ -1,5 +1,6 @@
 package com.projectmonkeyscope;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -72,7 +73,9 @@ public class MainActivity extends AppCompatActivity {
                // btnName = "Settings";
                // break;
             case R.id.menu_compass:
-                btnName = "Compass";
+                btnName = "Change Profile";
+                Intent profileIntent = new Intent(this, ProfileActivity.class);
+                startActivity(profileIntent);
                 break;
             //case R.id.menu_help:
               //  btnName = "Help";

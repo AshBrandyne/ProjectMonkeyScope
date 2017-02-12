@@ -3,6 +3,7 @@ package com.projectmonkeyscope;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -55,6 +56,10 @@ public class ProfileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+
+        /* Hide the ActionBar for this Activity */
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
 
         /* Finds and initializes the XML elements */
         monkeyLogo = (ImageView) findViewById(R.id.logo);
