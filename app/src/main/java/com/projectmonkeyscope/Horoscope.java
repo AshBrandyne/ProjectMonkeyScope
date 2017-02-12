@@ -63,4 +63,12 @@ public class Horoscope {
         cal.setTime(date);
         return cal.get(Calendar.YEAR) + cal.get(Calendar.MONTH) * 10 + cal.get(Calendar.DATE) * 100 * sign.toString().hashCode();
     }
+
+    /**
+     * Gives the text of the horoscope
+     * @return The horoscope for this sign and date.
+     */
+    public String getHoroscope() {
+        return this.toString();
+    }
 }
