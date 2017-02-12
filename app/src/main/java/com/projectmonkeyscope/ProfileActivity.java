@@ -64,6 +64,9 @@ public class ProfileActivity extends AppCompatActivity {
         /* initializes sharedPrefs */
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
 
+        /*Set date picker to Jan 1, 1999 */
+        datePicker.updateDate(1999, 0, 1);
+
         submitDateButton.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
