@@ -3,6 +3,7 @@ package com.projectmonkeyscope;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -56,6 +57,10 @@ public class ProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
+        /* Hide the ActionBar for this Activity */
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
+
         /* Finds and initializes the XML elements */
         monkeyLogo = (ImageView) findViewById(R.id.logo);
         datePicker = (DatePicker) findViewById(R.id.date_picker);
@@ -63,6 +68,9 @@ public class ProfileActivity extends AppCompatActivity {
 
         /* initializes sharedPrefs */
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+
+        /*Set date picker to Jan 1, 1999 */
+        datePicker.updateDate(1999, 0, 1);
 
         submitDateButton.setOnClickListener( new View.OnClickListener() {
             @Override
