@@ -6,29 +6,53 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
+
+import java.util.Calendar;
+import java.util.Date;
 
 import static com.projectmonkeyscope.R.layout.activity_main;
 
+/**
+ * A Horoscope is made, pass in Astrological sign and date
+ * Call getHoroscope on a Horoscope to get the Horoscope
+ */
 public class MainActivity extends AppCompatActivity {
     /**
      * Activity name for Log purposes
      */
     protected static final String ACTIVITY_NAME = "MainActivity";
 
+    TextView todayDateTV;
+    ImageView monkeyOfTheDay;
+    TextView horoscopeTV;
+    ImageView theLogo;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(activity_main);
         //Edit toolbar (ActionBar)
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setHomeAsUpIndicator(R.drawable.menu);
-        actionBar.setDisplayHomeAsUpEnabled(true);
+        //ActionBar actionBar = getSupportActionBar();
 
-        // Let's get the MAIN_PROFILE and see if it worked!
-        Profile userProfile = Profile.mainProfile;
+        todayDateTV = (TextView) findViewById(R.id.today_date);
+        monkeyOfTheDay = (ImageView) findViewById(R.id.monkey_of_the_day);
+        horoscopeTV = (TextView) findViewById(R.id.the_horoscope);
+        theLogo = (ImageView) findViewById(R.id.logo);
 
-        Log.i(ACTIVITY_NAME, "In onCreate() with key: " + userProfile.toString());
+        /* Create Horoscope for today's date      */
+        Horoscope todayHoroscope = createHoroscope();
+
+        //Add horoscope to TextView
+        horoscopeTV.setText(todayHoroscope.getHoroscope());
+
+
+        Log.i(ACTIVITY_NAME, "In onCreate()" );
 
     }
 
@@ -39,22 +63,37 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-    @Override//TODO: Make Navigation Drawer
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int itemId = item.getItemId();
         String btnName = null;
         switch(itemId) {
-            case R.id.menu_settings:
-                btnName = "Settings";
-                break;
+            //case R.id.menu_settings:
+               // btnName = "Settings";
+               // break;
             case R.id.menu_compass:
                 btnName = "Compass";
                 break;
-            case R.id.menu_help:
-                btnName = "Help";
-                break;
+            //case R.id.menu_help:
+              //  btnName = "Help";
+               // break;
         }
         Toast.makeText(this, "Button " + btnName, Toast.LENGTH_SHORT).show();
         return true;
+    }
+
+    public Horoscope createHoroscope() {
+        // Retrieves user's profile
+        Profile userProfile = Profile.mainProfile;
+        // Calculates users Astrological Sign
+        AstrologicalSign userSign = AstrologicalSign.getAstrologicalSignForDate(
+                userProfile.getMonth(),
+                userProfile.getDay()
+        );
+        // Gets today's date
+        Date todaysDate = Calendar.getInstance().getTime();
+
+        //Retrieves a Horoscope for today's date
+        return new Horoscope(userSign, todaysDate);
     }
 }
