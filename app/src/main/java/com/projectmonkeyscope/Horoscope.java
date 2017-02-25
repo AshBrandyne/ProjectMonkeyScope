@@ -1,5 +1,7 @@
 package com.projectmonkeyscope;
 
+import android.content.Context;
+
 import java.util.Calendar;
 import java.util.Date;
 
@@ -19,14 +21,17 @@ public class Horoscope {
      */
     private Date date;
 
+    private Context context;
+
     /**
      * Constructor for Horoscope class.
      * @param sign The astrological sign for the horoscope.
      * @param date The date for the horoscope.
      */
-    public Horoscope(AstrologicalSign sign, Date date) {
+    public Horoscope(AstrologicalSign sign, Date date, Context context) {
         this.sign = sign;
         this.date = date;
+        this.context = context;
     }
 
     /**
@@ -51,7 +56,10 @@ public class Horoscope {
      */
     public String toString() {
         PhrasalTemplate phrasalTemplate = new PhrasalTemplate(getSeed());
-        return "Placeholder horoscope for " + sign + " on " + date + ": " + phrasalTemplate.getTestPhrase();
+        phrasalTemplate.setContext(context);
+        phrasalTemplate.loadTemplates();
+        phrasalTemplate.parseTokensFromTemplates();
+        return "Placeholder horoscope for " + sign + " on " + date + ": " + phrasalTemplate.getPhrase();
     }
 
     /**

@@ -97,6 +97,6 @@ public class MainActivity extends AppCompatActivity {
         Date todaysDate = Calendar.getInstance().getTime();
 
         //Retrieves a Horoscope for today's date
-        return new Horoscope(userSign, todaysDate);
+        return new Horoscope(userSign, todaysDate, getApplicationContext());
     }
 }

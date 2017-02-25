@@ -1,0 +1,3 @@
+<NOUN> went to the <NOUN>.
+<NOUN> <VERB>ed quietly.
+<VERB>ing is disgusting.
