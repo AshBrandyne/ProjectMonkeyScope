@@ -21,7 +21,7 @@ public class PhrasalTemplate {
     private Random random;
     private ArrayList<String> templates;
     private HashMap<String, ArrayList<String>> tokens;
-    private static final String defaultTemplateFile = "testTemplates.txt";
+    private static final String defaultTemplateFile = "bootstrap.txt";
     private Context context;
 
     public PhrasalTemplate() {
@@ -174,8 +174,11 @@ public class PhrasalTemplate {
 
             if(nextTokenStart >= 0 && nextTokenEnd > nextTokenStart) {
                 String nextToken = inputString.substring(nextTokenStart + 1, nextTokenEnd);
+                Log.i("PhrasalTemplate", "Next token: " + nextToken);
+                if(!tokens.containsKey(nextToken)) {
+                    loadTokenFile(nextToken);
+                }
                 inputString = inputString.replaceFirst(nextToken, getTokenReplacement(nextToken));
-                nextTokenStart = nextTokenEnd;
             }
         } while (nextTokenStart != -1);
 

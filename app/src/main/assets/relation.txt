@@ -1,0 +1,10 @@
+friend
+uncle
+aunt
+sibling
+parent
+grandparent
+grandchild
+child
+monkey's uncle
+housemate

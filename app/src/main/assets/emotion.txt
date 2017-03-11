@@ -1,0 +1,6 @@
+angry
+calm
+happy
+sad
+focused
+sane
