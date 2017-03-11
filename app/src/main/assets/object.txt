@@ -5,3 +5,6 @@ toaster
 refrigerator
 house
 car
+camera
+laptop
+fan

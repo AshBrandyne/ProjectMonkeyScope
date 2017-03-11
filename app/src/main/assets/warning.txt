@@ -7,3 +7,4 @@ Some equipment that you use a lot, perhaps an <OBJECT>, or <OBJECT>, might go on
 Some rather <ADJECTIVE> news could come to you today about metaphysical or paranormal matters, ?SIGN.
 This could be a <ADJECTIVE-BAD> day, ?SIGN.
 You might hear some rather <ADJECTIVE> rumors today, ?SIGN.
+Don't even think of travelling by <TRAVELMODE>, ?SIGN.

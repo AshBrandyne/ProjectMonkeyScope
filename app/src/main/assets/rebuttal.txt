@@ -7,3 +7,4 @@ Call a professional <OCCUPATION>, and eat the expense.
 It will be a good idea to assess what needs to be done and take care of it in order of urgency.
 You will need to check this out for yourself before jumping to any conclusions.
 Don't be afraid to pass on what you learn.
+This may making you feel <EMOTION>, but don't focus too much on your emotions.
