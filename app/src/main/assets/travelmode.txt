@@ -1,0 +1,9 @@
+air
+plane
+sea
+boat
+blimp
+car
+bus
+train
+canoe

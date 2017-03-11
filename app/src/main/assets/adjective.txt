@@ -1,4 +1,2 @@
-big
-tall
-sweet
-kind
+<ADJECTIVE-GOOD>
+<ADJECTIVE-BAD>

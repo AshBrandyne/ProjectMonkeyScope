@@ -59,7 +59,7 @@ public class Horoscope {
         phrasalTemplate.setContext(context);
         phrasalTemplate.loadTemplates();
         phrasalTemplate.parseTokensFromTemplates();
-        return "Placeholder horoscope for " + sign + " on " + date + ": " + phrasalTemplate.getPhrase();
+        return "Placeholder horoscope for " + sign + " on " + date + ": " + processSpecialTokens( phrasalTemplate.getPhrase() );
     }
 
     /**
@@ -78,5 +78,19 @@ public class Horoscope {
      */
     public String getHoroscope() {
         return this.toString();
+    }
+
+    /**
+     * Replaces special tokens in string.
+     *
+     * ?SIGN is replaced with this Horoscope's sign. ie) Aquarius
+     *
+     * @param string The string to replace tokens
+     * @return A new string with the special tokens replaced.
+     */
+    private String processSpecialTokens(String string) {
+        string = string.replace("?SIGN", sign.toString());
+
+        return string;
     }
 }

@@ -21,7 +21,7 @@ public class PhrasalTemplate {
     private Random random;
     private ArrayList<String> templates;
     private HashMap<String, ArrayList<String>> tokens;
-    private static final String defaultTemplateFile = "testTemplates.txt";
+    private static final String defaultTemplateFile = "bootstrap.txt";
     private Context context;
 
     public PhrasalTemplate() {

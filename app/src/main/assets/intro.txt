@@ -1,3 +1,11 @@
-You will have a very good <NOUN>!
-You will have a very nice <NOUN>.
-Your <NOUN> will be okay.
+<WARNING>
+Today you might plan a quick trip by <TRAVELMODE>, ?SIGN.
+<WARNING>
+<WARNING>
+<WARNING>
+Generally you're pretty emotionally <ADJECTIVE-GOOD>, ?SIGN.
+<WARNING>
+<WARNING>
+<WARNING>
+<WARNING>
+<WARNING>

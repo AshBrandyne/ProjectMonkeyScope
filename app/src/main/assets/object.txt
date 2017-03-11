@@ -1,0 +1,7 @@
+computer
+tv
+radio
+toaster
+refrigerator
+house
+car
