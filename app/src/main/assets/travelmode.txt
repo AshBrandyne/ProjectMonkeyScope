@@ -7,3 +7,4 @@ car
 bus
 train
 canoe
+meditation

@@ -8,3 +8,8 @@ grandchild
 child
 monkey's uncle
 housemate
+peer
+colleague
+partner
+companion
+special friend

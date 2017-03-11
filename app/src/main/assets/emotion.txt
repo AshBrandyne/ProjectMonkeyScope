@@ -4,3 +4,26 @@ happy
 sad
 focused
 sane
+thoughtful
+unbalanced
+joyous
+frantic
+saucy
+sly
+tired
+exhausted
+on edge
+thirsty
+lonely
+gentle
+afraid
+nervous
+shaky
+unwell
+hopeful
+shy
+anxious
+strong
+positive
+pessimistic
+optimistic

@@ -1,3 +1,5 @@
 dentist
 plumber
 doctor
+travel agent
+telemarketer
