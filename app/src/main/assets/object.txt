@@ -8,3 +8,10 @@ car
 camera
 laptop
 fan
+garage
+truck
+garbage truck
+finances
+money
+spending
+financial savings

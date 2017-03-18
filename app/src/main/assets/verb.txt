@@ -3,3 +3,10 @@ jump
 fling
 walk
 talk
+swing
+slide
+blast
+run
+walk
+trust
+swim

@@ -2,3 +2,9 @@ stable
 attractive
 immediate
 mindful
+special
+unique
+sweet
+warm
+wise
+precious
