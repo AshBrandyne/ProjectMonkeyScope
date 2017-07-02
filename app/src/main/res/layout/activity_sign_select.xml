@@ -10,4 +10,63 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.projectmonkeyscope.SignSelectActivity">
 
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        >
+
+        <Button
+            android:text="Aquarius"
+            android:id="@+id/aquarius"
+            />
+
+        <Button
+            android:text="Pisces"
+            android:id="@+id/pisces"
+            android:gravity="center"/>
+
+        <Button
+            android:text="Aries"
+            android:id="@+id/aries"/>
+
+        <Button
+            android:text="Taurus"
+            android:id="@+id/taurus"/>
+
+        <Button
+            android:text="Gemini"
+            android:id="@+id/gemini"/>
+
+        <Button
+            android:text="Cancer"
+            android:id="@+id/cancer"/>
+
+        <Button
+            android:text="Leo"
+            android:id="@+id/leo"/>
+
+        <Button
+            android:text="Virgo"
+            android:id="@+id/virgo"/>
+
+        <Button
+            android:text="Libra"
+            android:id="@+id/libra"/>
+
+        <Button
+            android:text="Scorpio"
+            android:id="@+id/scorpio"/>
+
+        <Button
+            android:text="Sagittarius"
+            android:id="@+id/sagittarius"/>
+
+        <Button
+            android:text="Capricorn"
+            android:id="@+id/capricorn"/>
+
+    </GridLayout>
 </RelativeLayout>
