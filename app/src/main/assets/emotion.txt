@@ -27,3 +27,11 @@ strong
 positive
 pessimistic
 optimistic
+mischievous
+cautious
+curious
+mysterious
+miserable
+unhinged
+boastful
+indecisive

@@ -2,3 +2,6 @@ stable
 attractive
 immediate
 mindful
+mysterious
+wonderful
+amazing

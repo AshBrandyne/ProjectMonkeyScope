@@ -3,3 +3,5 @@ unexpected
 bizarre
 hectic
 erratic
+unwise
+unfortunate
