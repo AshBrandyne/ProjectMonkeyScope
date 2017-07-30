@@ -3,6 +3,8 @@ unexpected
 bizarre
 hectic
 erratic
+unwise
+unfortunate
 unsettling
 dim
 strange

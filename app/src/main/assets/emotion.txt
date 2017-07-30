@@ -42,3 +42,11 @@ good
 positive
 negative
 patient
+mischievous
+cautious
+curious
+mysterious
+miserable
+unhinged
+boastful
+indecisive
