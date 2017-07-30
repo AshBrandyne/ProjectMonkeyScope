@@ -66,10 +66,10 @@ public class Horoscope {
      * Generates and returns a seed for this horoscope based on the date and astrological sign
      * @return A seed for the horoscope
      */
-    private long getSeed() {
+    public long getSeed() {
         Calendar cal = Calendar.getInstance();
         cal.setTime(date);
-        return cal.get(Calendar.YEAR) + cal.get(Calendar.MONTH) * 10 + cal.get(Calendar.DATE) * 100 * sign.toString().hashCode();
+        return cal.get(Calendar.YEAR) + cal.get(Calendar.MONTH) * 100 + cal.get(Calendar.DATE) * 1000 * sign.toString().hashCode();
     }
 
     /**
