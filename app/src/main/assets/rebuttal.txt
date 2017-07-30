@@ -7,11 +7,11 @@ Call a professional <OCCUPATION>, and eat the expense.
 It will be a good idea to assess what needs to be done and take care of it in order of urgency.
 You will need to check this out for yourself before jumping to any conclusions.
 Don't be afraid to pass on what you learn.
-This may making you feel <EMOTION>, but don't focus too much on your emotions.
+This may be making you feel <EMOTION>, but don't focus too much on your emotions.
 But that shouldn’t matter.
 When was the last time you drank some <DRINK>? Treat yourself!
 Treat yourself! Order some <FOOD> and stay in tonight.
-Alls well that ends well.
+All's well that ends well.
 Take a small step, at first.
 This is just the beginning.
 Why not contact your <RELATION> this week, it may make you feel <EMOTION>.

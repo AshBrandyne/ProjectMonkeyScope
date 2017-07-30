@@ -185,14 +185,13 @@ public class PhrasalTemplate {
                             && (nextTokenStart-i) > 0) {
                         i++;
                     }
-                    if(nextTokenStart-i-1 > 0) {
-                        Log.i("PhrasalTemplate", "  previous char: " + inputString.charAt(nextTokenStart - i - 1));
-                        if(!Character.isAlphabetic(inputString.charAt(nextTokenStart - i - 1))) {
-                            Log.i("PhrasalTemplate", "      uppercase1");
+                    int checkCapIndex = nextTokenStart-2;
+                    if(checkCapIndex > 0) {
+                        if(!Character.isLetterOrDigit(inputString.charAt(checkCapIndex)) && inputString.charAt(checkCapIndex) != ' ' && inputString.charAt(checkCapIndex) != '>') {
                             replacement = replacement.substring(0, 1).toUpperCase() + replacement.substring(1);
                         }
                     } else {
-                        Log.i("PhrasalTemplate", "      uppercase2");
+                        //First word in horoscope
                         replacement = replacement.substring(0, 1).toUpperCase() + replacement.substring(1);
                     }
                 }
