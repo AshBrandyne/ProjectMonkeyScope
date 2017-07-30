@@ -46,7 +46,7 @@
         android:layout_below="@id/enter_dob"></DatePicker>
 
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Get your Monkeyscope"
         android:layout_below="@id/date_picker"
