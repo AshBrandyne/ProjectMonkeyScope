@@ -1,10 +1,11 @@
-Hang in there. You should hear from your <RELATION> again soon.
-It's always best to go with the flow and make the most of it.
+Hang in there, ?SIGN. You should hear from your <RELATION> again soon.
+It's best to go with the flow and make the most of it.
 You want your <NOUN> back to normal as soon as possible.
 You need some <ABSTRACTNOUN-GOOD> and <ABSTRACTNOUN-GOOD>.
+You need more <ABSTRACTNOUN-GOOD> and less <ABSTRACTNOUN-BAD>.
 It could be worse! Just move ahead with what needs to be done.
 Slow down and stay <EMOTION>. It's the only way you will remain <EMOTION> today.
 Don't depend on <ADJECTIVE-GOOD> repayment.
-This is definitely a day to exercise <ABSTRACTNOUN>. Be patient!
+This is definitely a day to exercise <ABSTRACTNOUN>. Be <EMOTION>!
 That's the only way you can stay <EMOTION>!
 It's better to nip this in the bud than let it continue.

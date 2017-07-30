@@ -174,11 +174,30 @@ public class PhrasalTemplate {
 
             if(nextTokenStart >= 0 && nextTokenEnd > nextTokenStart) {
                 String nextToken = inputString.substring(nextTokenStart + 1, nextTokenEnd);
-                Log.i("PhrasalTemplate", "Next token: " + nextToken);
+                Log.i("PhrasalTemplate", "Next token @ " + nextTokenStart + ": " + nextToken);
                 if(!tokens.containsKey(nextToken)) {
                     loadTokenFile(nextToken);
                 }
-                inputString = inputString.replaceFirst(nextToken, getTokenReplacement(nextToken));
+                String replacement = getTokenReplacement(nextToken);
+                if(nextTokenStart > 0) {
+                    int i=1;
+                    while (inputString.charAt(nextTokenStart-i) != '<' && inputString.charAt(nextTokenStart-i) != '>' && inputString.charAt(nextTokenStart-i) != ' '
+                            && (nextTokenStart-i) > 0) {
+                        i++;
+                    }
+                    if(nextTokenStart-i-1 > 0) {
+                        Log.i("PhrasalTemplate", "  previous char: " + inputString.charAt(nextTokenStart - i - 1));
+                        if(!Character.isAlphabetic(inputString.charAt(nextTokenStart - i - 1))) {
+                            Log.i("PhrasalTemplate", "      uppercase1");
+                            replacement = replacement.substring(0, 1).toUpperCase() + replacement.substring(1);
+                        }
+                    } else {
+                        Log.i("PhrasalTemplate", "      uppercase2");
+                        replacement = replacement.substring(0, 1).toUpperCase() + replacement.substring(1);
+                    }
+                }
+
+                inputString = inputString.replaceFirst(nextToken, replacement);
             }
         } while (nextTokenStart != -1);
 

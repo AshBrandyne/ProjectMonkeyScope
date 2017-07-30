@@ -4,3 +4,16 @@ banana
 pizza
 comfort food
 sushi
+steak
+cheese
+toast
+sandwich
+cucumber
+cereal
+apple
+banana
+orange
+carrot
+hamburger
+hotdog
+cheeseburger
