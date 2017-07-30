@@ -1,6 +1,7 @@
 package com.projectmonkeyscope;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,6 +9,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -46,13 +48,22 @@ public class MainActivity extends AppCompatActivity {
         horoscopeTV = (TextView) findViewById(R.id.the_horoscope);
         theLogo = (ImageView) findViewById(R.id.logo);
 
-        /* Create Horoscope for today's date      */
+        // The main view
+        RelativeLayout view = (RelativeLayout) findViewById(R.id.activity_main);
+
+        // Set background colour of view
+        view.setBackgroundColor(Color.parseColor("#9100b2"));
+
+        // Create Horoscope for today's date
         Horoscope todayHoroscope = createHoroscope();
 
-        //Add horoscope to TextView
+        //Set today's date
+        todayDateTV.setText(todayHoroscope.getDate().toString());
+
+        // Add horoscope to TextView
         horoscopeTV.setText(todayHoroscope.getHoroscope());
 
-        //Set monkey to correct image
+        // Set monkey to correct image
         String sign = todayHoroscope.getAstrologicalSign().toString();
         //monkeyOfTheDay.setImageResource();
         switch (sign) {

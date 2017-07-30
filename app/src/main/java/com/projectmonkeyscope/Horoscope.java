@@ -59,7 +59,7 @@ public class Horoscope {
         phrasalTemplate.setContext(context);
         phrasalTemplate.loadTemplates();
         phrasalTemplate.parseTokensFromTemplates();
-        return "Placeholder horoscope for " + sign + " on " + date + ": " + processSpecialTokens( phrasalTemplate.getPhrase() );
+        return processSpecialTokens( phrasalTemplate.getPhrase() );
     }
 
     /**
