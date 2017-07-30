@@ -52,6 +52,50 @@ public class MainActivity extends AppCompatActivity {
         //Add horoscope to TextView
         horoscopeTV.setText(todayHoroscope.getHoroscope());
 
+        //Set monkey to correct image
+        String sign = todayHoroscope.getAstrologicalSign().toString();
+        //monkeyOfTheDay.setImageResource();
+        switch (sign) {
+            case "Aquarius":
+                monkeyOfTheDay.setImageResource(R.drawable.aquarius);
+                break;
+            case "Pisces":
+                monkeyOfTheDay.setImageResource(R.drawable.pisces);
+                break;
+            case "Aries":
+                monkeyOfTheDay.setImageResource(R.drawable.aries);
+                break;
+            case "Taurus":
+                monkeyOfTheDay.setImageResource(R.drawable.taurus);
+                break;
+            case "Gemini":
+                monkeyOfTheDay.setImageResource(R.drawable.gemini);
+                break;
+            case "Cancer":
+                monkeyOfTheDay.setImageResource(R.drawable.cancer);
+                break;
+            case "Leo":
+                monkeyOfTheDay.setImageResource(R.drawable.leo);
+                break;
+            case "Virgo":
+                monkeyOfTheDay.setImageResource(R.drawable.virgo);
+                break;
+            case "Libra":
+                monkeyOfTheDay.setImageResource(R.drawable.libra);
+                break;
+            case "Scorpio":
+                monkeyOfTheDay.setImageResource(R.drawable.scorpio);
+                break;
+            case "Sagittarius":
+                monkeyOfTheDay.setImageResource(R.drawable.sagittarius);
+                break;
+            case "Capricorn":
+                monkeyOfTheDay.setImageResource(R.drawable.capricorn);
+                break;
+            default:
+                monkeyOfTheDay.setImageResource(R.drawable.leo);
+
+        }
 
         Log.i(ACTIVITY_NAME, "In onCreate()" );
 
