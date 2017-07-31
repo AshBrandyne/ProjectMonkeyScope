@@ -7,6 +7,7 @@ import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
@@ -27,14 +28,16 @@ public class SplashActivity extends AppCompatActivity {
      * The logo to be animated when app first loads
      */
     ImageView splashImage;
-    /**
-     * The Shared Preferences
-     */
+
     private SharedPreferences sharedPreferences;
     /**
      * Boolean flag set to true if profile exists in sharedPrefs
      */
     private boolean profileExists = false;
+    /**
+     * The view for onClickListener
+     */
+    private View view;
 
     /**
      * Static keys for SharedPrefs
@@ -66,6 +69,14 @@ public class SplashActivity extends AppCompatActivity {
         splashImage = (ImageView) findViewById(R.id.splash_image);
         Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.splash_animation);
         splashImage.setAnimation(animation);
+
+        view = (View) findViewById(R.id.activity_splash);
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                splashImage.clearAnimation();
+            }
+        });
 
         animation.setAnimationListener(new Animation.AnimationListener() {
             @Override
