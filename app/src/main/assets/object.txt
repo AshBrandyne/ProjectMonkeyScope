@@ -1,5 +1,5 @@
 computer
-tv
+television
 radio
 toaster
 refrigerator
@@ -11,7 +11,27 @@ fan
 garage
 truck
 garbage truck
-finances
-money
-spending
-financial savings
+chainsaw
+remote control
+headphones
+cellphone
+phone
+electric guitar
+keyboard
+surfboard
+bicycle
+lawnmower
+coffee maker
+gaming console
+clock
+bookshelf
+lamp
+smoke detector
+oven
+stove
+microwave
+couch
+chair
+air conditioner
+furnace
+fireplace

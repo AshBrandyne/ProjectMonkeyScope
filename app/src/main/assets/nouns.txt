@@ -1,3 +1,6 @@
 communications
 relationships
 anomalies
+finances
+money
+financial savings
