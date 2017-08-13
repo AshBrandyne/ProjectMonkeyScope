@@ -13,3 +13,6 @@ colleague
 partner
 companion
 special friend
+roommate
+classmate
+elderly neighbor

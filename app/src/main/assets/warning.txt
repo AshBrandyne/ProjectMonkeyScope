@@ -8,3 +8,5 @@ Some rather <ADJECTIVE> news could come to you today about metaphysical or paran
 This could be a <ADJECTIVE-BAD> day, ?SIGN.
 You might hear some rather <ADJECTIVE> rumors today, ?SIGN.
 Don't even think of travelling by <TRAVELMODE>, ?SIGN.
+Try not to <VERB> the <TRAVELMODE> too much today, ?SIGN.
+You <RELATION> can sense your <ADJECTIVE-BAD> nature, so don't think you're fooling them.
