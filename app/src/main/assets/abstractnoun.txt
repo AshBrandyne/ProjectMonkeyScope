@@ -9,3 +9,6 @@ lesson
 chaos
 caution
 distraction
+desire
+<ABSTRACTNOUN-GOOD>
+<ABSTRACTNOUN-BAD>

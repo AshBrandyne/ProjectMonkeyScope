@@ -3,3 +3,16 @@ plumber
 doctor
 travel agent
 telemarketer
+salesperson
+computer programmer
+butcher
+candlestick maker
+baker
+office worker
+tattoo artist
+gas station attendant
+veterinarian
+musician
+artist
+soldier
+aircraft pilot

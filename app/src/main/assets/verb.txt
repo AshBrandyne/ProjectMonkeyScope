@@ -10,3 +10,9 @@ run
 walk
 trust
 swim
+slam
+crush
+swing
+dump
+yell
+scream

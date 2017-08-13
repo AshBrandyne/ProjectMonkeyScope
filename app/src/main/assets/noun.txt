@@ -1,5 +1,4 @@
 monkey
-wiring
 <OBJECT>
 <FOOD>
 <ABSTRACTNOUN>

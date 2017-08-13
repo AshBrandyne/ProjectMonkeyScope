@@ -9,3 +9,5 @@ train
 canoe
 meditation
 bicycle
+cruiseship
+submarine

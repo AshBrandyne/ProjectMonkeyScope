@@ -8,4 +8,6 @@ tea
 coffee
 decaf
 spring water
-H2o
+H20
+coconut water
+banana juice

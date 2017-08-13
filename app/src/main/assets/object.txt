@@ -35,3 +35,9 @@ chair
 air conditioner
 furnace
 fireplace
+wrist watch
+pocket watch
+necklace
+purse
+banana
+wiring
