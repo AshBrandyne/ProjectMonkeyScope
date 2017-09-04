@@ -2,7 +2,7 @@ This probably doesn't relate to difficulties with your <RELATION>s.
 It's more likely to involve problems with <NOUN>, <NOUN>, or <NOUN>.
 If you don't bring some <ABSTRACTNOUN-GOOD> to this chaos, it could give you a <AILMENT>!
 Perhaps some repairs need to be made around the <OBJECT> or to the <OBJECT>.
-Maybe someone needs an <ADJECTIVE-BAD> trip to the <OCCUPATION>.
+Maybe someone needs a <ADJECTIVE-BAD> trip to the <OCCUPATION>.
 Today's events might seem to conspire to create <ADJECTIVE-BAD> moods that you aren't used to feeling.
 Do not try to fix it yourself even if you think you might know how.
 This isn't anything that affects you directly, but more likely concerns discoveries of <NOUNS>.
