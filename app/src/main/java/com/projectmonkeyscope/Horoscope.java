@@ -59,7 +59,7 @@ public class Horoscope {
         phrasalTemplate.setContext(context);
         phrasalTemplate.loadTemplates();
         phrasalTemplate.parseTokensFromTemplates();
-        return processSpecialTokens( phrasalTemplate.getPhrase() );
+        return Grammar.fixGrammar(processSpecialTokens(phrasalTemplate.getPhrase()));
     }
 
     /**
@@ -93,4 +93,5 @@ public class Horoscope {
 
         return string;
     }
+
 }
