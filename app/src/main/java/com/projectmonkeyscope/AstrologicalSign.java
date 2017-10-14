@@ -48,6 +48,12 @@ public class AstrologicalSign {
     }
 
     /**
+     * Returns the starting date of the Astrological Sign
+     * @return The starting date of the Astrological Sign
+     */
+    public MonthDay getStartDate() { return startDate; }
+
+    /**
      * Returns an array containing the twelve astrological signs
      * @return An array containing the twelve astrological signs
      */

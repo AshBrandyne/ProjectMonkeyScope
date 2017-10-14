@@ -132,6 +132,11 @@ public class MainActivity extends AppCompatActivity {
                 Intent profileIntent = new Intent(this, ProfileActivity.class);
                 startActivity(profileIntent);
                 break;
+            case R.id.menu_sign_select:
+                btnName = "Select Sign";
+                Intent selectSignIntent = new Intent(this, SignSelectActivity.class);
+                startActivity(selectSignIntent);
+                break;
             //case R.id.menu_help:
               //  btnName = "Help";
                // break;

@@ -23,7 +23,7 @@ public class Profile{
 
 
     /**
-     * Default constructor for Profile class
+     * Initial constructor for Profile class
      * Sets MonthDay Object with birth month and day
      *
      * @param month the birth month
@@ -31,6 +31,14 @@ public class Profile{
      */
     public Profile(int month, int day) {
         birthDate = new MonthDay(month, day);
+    }
+
+    /**
+     * Constructor for Profile Class
+     * @param birthDate The birth month and day
+     */
+    public Profile(MonthDay birthDate) {
+        this.birthDate = birthDate;
     }
 
     /**
