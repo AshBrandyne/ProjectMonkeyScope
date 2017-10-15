@@ -18,4 +18,9 @@
         android:icon="@android:drawable/ic_menu_compass"
         app:showAsAction="never"
         android:orderInCategory="105"/>
+    <item android:id="@+id/menu_sign_select"
+        android:title="Select Sign"
+        android:icon="@android:drawable/ic_menu_compass"
+        app:showAsAction="never"
+        android:orderInCategory="106"/>
 </menu>
