@@ -10,3 +10,4 @@ Generally you're pretty emotionally <ADJECTIVE-GOOD>, ?SIGN.
 <WARNING>
 <WARNING>
 Have you ever travelled by <TRAVELMODE>? Think of it this way...
+Well I'll be a monkey's uncle, ?SIGN.
